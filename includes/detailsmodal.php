@@ -65,10 +65,10 @@ $size_array = explode(',', $sizestring);
            <div class="">
 
 
-           <h4 style="font-weight:bold;" class="text-center"><span style="border-bottom:1px solid #000;">Details</span></h4><br>
+           <h4 style="font-weight:bold;" class="text-center text-info"><span style="border-bottom:1px solid #000;">Details</span></h4><br>
             </div>
           <div class="col-sm-6 ">
-            <p> <strong>Description:</strong> </p>
+            <p> <strong>Description:</strong> </p><hr>
             <p><?= $product['description']; ?></p> <hr>
             <!-- <hr> -->
             <p> <strong>House Type:</strong> <?php echo $brand['brand']; ?> </p>
@@ -111,11 +111,12 @@ $size_array = explode(',', $sizestring);
             </form>
      </div><br>
 
-     <button class="btn btn-warning" onclick="add_to_cart(); return false;" style=""> <span class="glyphicon glyphicon-shopping-cart"></span>Book </button>
+     <div class="my-2 d-grid gap-2">
+     <button class="btn btn-warning" id="book-btn" onclick="add_to_cart(); return false;" style=""> <span class="glyphicon glyphicon-shopping-cart"></span>Book </button>
      or
      <button class="btn btn-default clearfix" onclick="closeModal()">Close</button>
 
-
+     </div>
 
 
           </div>
