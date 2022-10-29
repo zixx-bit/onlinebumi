@@ -97,20 +97,17 @@ if (isset($_POST['signUp-btn'])) {
                 } else {
                   // add user to databse
                   $hashed = password_hash($password, PASSWORD_DEFAULT);
-                  $add_user = $db->query("INSERT INTO users (full_name,email,password,permissions)
-                  Values ($name, $email, $hashed, $permissions
-                    -- ?, ?, ?, ?
-                    -- $name, $email, $hashed, $permissions
-                  )");
-                    // $add_user->bind_param("ssss", $name, $email, $hashed, $permissions);
-                    // $add_user->execute();
-                    // if ($add_user->execute() == true) {
-                    //   $_SESSION['success_flash'] = ' Sign up succesfull. Try  to login in';
-                    //   header('Location: login.php');
-                    // }else {
-                    //   $_SESSION['error_flash'] = ' Sign up failed! Try again';
-                    //   header('Location: login.php');
-                    // }
+                  $add_user = $db->prepare("INSERT INTO users (full_name,email,password,permissions)
+                  Values (?, ?, ?, ?)");
+                    $add_user->bind_param("ssss", $name, $email, $hashed, $permissions);
+                    $add_user->execute();
+                    if ($add_user->execute() == true) {
+                      $_SESSION['success_flash'] = ' Sign up succesfull. Try  to login in';
+                      header('Location: login.php');
+                    }else {
+                      $_SESSION['error_flash'] = ' Sign up failed! Try again';
+                      header('Location: login.php');
+                    }
                 }
               }
 
