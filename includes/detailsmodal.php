@@ -69,7 +69,7 @@ $size_array = explode(',', $sizestring);
             </div>
           <div class="col-sm-6 ">
             <p> <strong>Description:</strong> </p>
-            <p><?= nl2br($product['description'] ); ?></p> <hr>
+            <p><?= $product['description']; ?></p> <hr>
             <!-- <hr> -->
             <p> <strong>House Type:</strong> <?php echo $brand['brand']; ?> </p>
 
@@ -111,7 +111,7 @@ $size_array = explode(',', $sizestring);
             </form>
      </div><br>
 
-     <button class="btn btn-warning" onclick="add_to_cart(); return false;"> <span class="glyphicon glyphicon-shopping-cart"></span>Book </button>
+     <button class="btn btn-warning" onclick="add_to_cart(); return false;" style=""> <span class="glyphicon glyphicon-shopping-cart"></span>Book </button>
      or
      <button class="btn btn-default clearfix" onclick="closeModal()">Close</button>
 
