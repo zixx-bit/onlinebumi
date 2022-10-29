@@ -1451,6 +1451,12 @@ h1 {
 
 }
 
+#book-btn:hover{
+  color: #ffffff;
+  font-weight: bold;
+  transition: .5s;
+}
+
 /* CSS */
 .button-63 {
   align-items: center;
