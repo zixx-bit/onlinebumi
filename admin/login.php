@@ -1,6 +1,6 @@
 <?php
 // error_reporting(1);
- require_once $_SERVER['DOCUMENT_ROOT']. '/core/init.php';
+ require_once $_SERVER['DOCUMENT_ROOT']. '/online store/core/init.php';
  // include 'includes/head.php';
  $name ="";
  $email ="";
@@ -8,7 +8,7 @@
  $confirm ="";
  $permissions = "";
 
-      if (isset($_POST['signIn-btn'])) {
+      if (isset($_GET['signIn-btn'])) {
           $email = ((isset($_POST['email']))? sanitize($_POST['email']):'');
           $email = trim($email);
           $password = ((isset($_POST['password']))? sanitize($_POST['password']):'');
@@ -55,7 +55,7 @@
             }
 
     // sign up
-if (isset($_POST['signUp-btn'])) {
+if (isset($_GET['signUp-btn'])) {
         $name = ((isset($_POST['name']))?sanitize($_POST['name']):'');
         $email = ((isset($_POST['email']))?sanitize($_POST['email']):'');
         $password = ((isset($_POST['password']))?sanitize($_POST['password']):'');
@@ -63,6 +63,7 @@ if (isset($_POST['signUp-btn'])) {
         $permissions = ((isset($_POST['permissions']))?sanitize($_POST['permissions']):'');
         $errors = array();
 
+        if ($_POST) {
                 $emailQuery = $db->prepare("SELECT * FROM users WHERE email = ? ");
                 $emailQuery->bind_param("s", $email);
                 $emailQuery->execute();
@@ -110,6 +111,7 @@ if (isset($_POST['signUp-btn'])) {
                     }
                 }
               }
+            }
 
                 // #delete duplicates
                 // $duplicate = $db->prepare("SELECT * FROM users WHERE email = '?'");
