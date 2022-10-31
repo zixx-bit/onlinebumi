@@ -110,13 +110,7 @@
   </div>
 </div>
 
-
-
-
-
-
-
-<section class="bg-light py-4 my-5">
+     <section class="bg-light py-4 my-5">
 
         <div class="container">
         <div class="row">
@@ -132,7 +126,8 @@
 
 
             <?php $photos =explode(',', $product['image']); ?>
-        <img  id="featured-image" src="<?php echo $photos[0]; ?>" style="width:100%; height:250px; object-fit:cover;"
+        <img  id="featured-image" src="<?php echo $photos[0]; ?>"
+         style="width:100%; height:250px; object-fit:cover;"
          class="card-image-top rounded " alt="<?php echo $product['title']; ?>">
 
 
