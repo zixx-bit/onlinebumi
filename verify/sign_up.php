@@ -53,7 +53,7 @@
 
 
           <!-- permissions -->
-          <div class="form-group" style="display:block;">
+          <div class="form-group" style="display:hidden;">
             <label for="permissions" id="permissions_sign">Permissions:</label>
             <select class="form-control" name="permissions">
               <!-- <option value=""<?=(($permissions == '')?' selected':'' );?>></option> -->
