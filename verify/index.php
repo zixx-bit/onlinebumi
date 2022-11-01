@@ -45,7 +45,7 @@ if (empty($_SESSION['id'])) {
             <strong><?php echo $_SESSION['email']; ?></strong>
           </div>
         <?php else: ?>
-          <button href="" class="btn btn-lg btn-primary btn-block">Proceed >></button>
+          <a href="../admin/products.php" class="btn btn-lg btn-primary btn-block">Proceed >></a>
         <?php endif;?>
       </div>
     </div>
