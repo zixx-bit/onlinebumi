@@ -3,9 +3,10 @@ require_once 'sendEmails.php';
 session_start();
 $username = "";
 $email = "";
+$permissions = "";
 $errors = [];
 
-$conn = new mysqli('localhost', 'bitray', '802neoKenya', 'store');
+$conn = new mysqli('localhost', 'bitray', '802neoKenya', 'users');
 
 // SIGN UP USER
 if (isset($_POST['signup-btn'])) {
@@ -26,18 +27,19 @@ if (isset($_POST['signup-btn'])) {
     $email = $_POST['email'];
     $token = bin2hex(random_bytes(50)); // generate unique token
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT); //encrypt password
+    $permissions = $_POST['Permissions'];
 
     // Check if email already exists
-    $sql = "SELECT * FROM verify WHERE email='$email' LIMIT 1";
+    $sql = "SELECT * FROM users WHERE email='$email' LIMIT 1";
     $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) > 0) {
         $errors['email'] = "Email already exists";
     }
 
     if (count($errors) === 0) {
-        $query = "INSERT INTO verify SET username=?, email=?, token=?, password=?";
+        $query = "INSERT INTO users SET full_name=?, email=?, token=?, password=?, permissions=?";
         $stmt = $conn->prepare($query);
-        $stmt->bind_param('ssss', $username, $email, $token, $password);
+        $stmt->bind_param('sssss', $username, $email, $token, $password, $permissions);
         $result = $stmt->execute();
 
         if ($result) {
