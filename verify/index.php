@@ -15,7 +15,7 @@ if (empty($_SESSION['id'])) {
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
   <link rel="stylesheet" href="main.css">
-  <title>User verification system PHP</title>
+  <title>User verification</title>
 </head>
 
 <body>
@@ -45,7 +45,7 @@ if (empty($_SESSION['id'])) {
             <strong><?php echo $_SESSION['email']; ?></strong>
           </div>
         <?php else: ?>
-          <button class="btn btn-lg btn-primary btn-block">I'm verified!!!</button>
+          <button href="" class="btn btn-lg btn-primary btn-block">Proceed >></button>
         <?php endif;?>
       </div>
     </div>
