@@ -35,18 +35,34 @@
             <label>Username</label>
             <input type="text" name="username" class="form-control form-control-lg" value="<?php echo $username; ?>">
           </div>
+
           <div class="form-group">
             <label>Email</label>
             <input type="text" name="email" class="form-control form-control-lg" value="<?php echo $email; ?>">
           </div>
+
           <div class="form-group">
             <label>Password</label>
-            <input type="password" name="password" class="form-control form-control-lg">
+            <input type="password" name="password" class="form-control form-control-lg" value="<?php echo $password; ?>">
           </div>
+
           <div class="form-group">
             <label>Password Confirm</label>
-            <input type="password" name="passwordConf" class="form-control form-control-lg">
+            <input type="password" name="passwordConf" class="form-control form-control-lg" value="<?php echo $passwordConf; ?>">
           </div>
+
+
+          <!-- permissions -->
+          <div class="form-group" style="display:block;">
+            <label for="permissions" id="permissions_sign">Permissions:</label>
+            <select class="form-control" name="permissions">
+              <!-- <option value=""<?=(($permissions == '')?' selected':'' );?>></option> -->
+              <option value="editor"<?=(($permissions =='editor')?' selected':'' );?>>Editor</option>
+              <!-- <option value="admin,editor"<?=(($permissions =='admin, editor')?' selected':'' );?>>Admin</option> -->
+            </select>
+              </div>
+
+
           <div class="form-group">
             <button type="submit" name="signup-btn" class="btn btn-lg btn-block">Sign Up</button>
           </div>
