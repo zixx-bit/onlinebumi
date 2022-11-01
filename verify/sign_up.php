@@ -62,10 +62,10 @@
             </select>
               </div>
 
-
           <div class="form-group">
             <button type="submit" name="signup-btn" class="btn btn-lg btn-block">Sign Up</button>
           </div>
+
         </form>
         <p>Already have an account? <a href="login.php">Login</a></p>
       </div>
