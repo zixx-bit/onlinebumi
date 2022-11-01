@@ -8,7 +8,7 @@ if (isset($_GET['token'])) {
     $sql = "SELECT * FROM verify WHERE token='$token' LIMIT 1";
 
       $result = mysqli_query($conn, $sql);
-      var_dump($result);
+      // var_dump($result);
 
     if (mysqli_num_rows($result) > 0) {
         $user = mysqli_fetch_assoc($result);
