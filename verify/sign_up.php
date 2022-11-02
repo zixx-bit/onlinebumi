@@ -43,12 +43,12 @@
 
           <div class="form-group">
             <label>Password</label>
-            <input type="password" name="password" class="form-control form-control-lg" value="<?php echo $password; ?>">
+            <input type="password" name="password" class="form-control form-control-lg" value="">
           </div>
 
           <div class="form-group">
             <label>Password Confirm</label>
-            <input type="password" name="passwordConf" class="form-control form-control-lg" value="<?php echo $passwordConf; ?>">
+            <input type="password" name="passwordConf" class="form-control form-control-lg" value="">
           </div>
 
 
