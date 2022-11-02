@@ -6,7 +6,7 @@ $email = "";
 $permissions = "";
 $errors = [];
 
-$conn = new mysqli('localhost', 'bitray', '802neoKenya', 'users');
+$conn = new mysqli('localhost', 'bitray', '802neoKenya', 'store');
 
 // SIGN UP USER
 if (isset($_POST['signup-btn'])) {
@@ -27,7 +27,7 @@ if (isset($_POST['signup-btn'])) {
     $email = $_POST['email'];
     $token = bin2hex(random_bytes(50)); // generate unique token
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT); //encrypt password
-    $permissions = $_POST['Permissions'];
+    $permissions = $_POST['permissions'];
 
     // Check if email already exists
     $sql = "SELECT * FROM users WHERE email='$email' LIMIT 1";
