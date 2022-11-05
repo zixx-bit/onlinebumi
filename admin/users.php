@@ -120,7 +120,7 @@ if (isset($_GET['add'])) {
 
   <?php
 }else{
-$userQuery = $db->query("SELECT * FROM users ORDER BY full_name");
+$userQuery = $db->query("SELECT * FROM verify ORDER BY full_name");
 
  ?>
 
