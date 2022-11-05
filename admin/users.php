@@ -10,7 +10,7 @@ include "includes/head.php";
 include "includes/navigation.php";
 if (isset($_GET['delete'])) {
   $delete_id = sanitize($_GET['delete']);
-  $delete_user = $db->prepare("DELETE FROM users WHERE id = ? ");
+  $delete_user = $db->prepare("DELETE FROM verify WHERE id = ? ");
   $delete_user->bind_param("i", $delete_id);
   $delete_user->execute();
   $_SESSION['success_flash'] = 'User has been deleted';
@@ -24,7 +24,7 @@ if (isset($_GET['add'])) {
   $permissions = ((isset($_POST['permissions']))?sanitize($_POST['permissions']):'');
   $errors = array();
   if ($_POST) {
-    $emailQuery = $db->prepare("SELECT * FROM users WHERE email = ? ");
+    $emailQuery = $db->prepare("SELECT * FROM verify WHERE email = ? ");
     $emailQuery->bind_param("s", $email);
     $emailQuery->execute();
     $emailQ_fetched = $emailQuery->get_result();
@@ -60,7 +60,7 @@ if (isset($_GET['add'])) {
     else {
       // add user to databse
       $hashed = password_hash($password, PASSWORD_DEFAULT);
-      $add_user = $db->prepare("INSERT INTO users (full_name,email,password,permissions)
+      $add_user = $db->prepare("INSERT INTO verify (full_name,email,password,permissions)
       Values (?, ?, ?, ?)");
         $add_user->bind_param("ssss", $name, $email, $hashed, $permissions);
         $add_user->execute();
