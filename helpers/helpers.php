@@ -34,7 +34,7 @@ function login($user_id){
   $_SESSION['SBUser'] = $user_id;
   global $db;
   $date = date("Y-m-d H:i:s");
-  $login_user = $db->prepare("UPDATE users SET last_login = ? WHERE id = ?");
+  $login_user = $db->prepare("UPDATE verify SET last_login = ? WHERE id = ?");
   $login_user->bind_param("si", $date, $user_id);
   $login_user->execute();
   $messages[] = 'you are now logged in';
