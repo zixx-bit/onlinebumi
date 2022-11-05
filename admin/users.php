@@ -10,7 +10,7 @@ include "includes/head.php";
 include "includes/navigation.php";
 if (isset($_GET['delete'])) {
   $delete_id = sanitize($_GET['delete']);
-  $delete_user = $db->prepare("DELETE FROM users WHERE id = ? ");
+  $delete_user = $db->prepare("DELETE FROM verify WHERE id = ? ");
   $delete_user->bind_param("i", $delete_id);
   $delete_user->execute();
   $_SESSION['success_flash'] = 'User has been deleted';
