@@ -25,7 +25,7 @@ $pquery = $db->query($sql);
 
             <li><a class="btn-sm button-86" href="admin/products.php?add"
               style=" background-image: linear-gradient(to bottom right, #fcd34d, #ef4444, #ec4899);"> Submit Property+ </a></li> <br>
-            <li><a class="btn-sm button-70" href="admin/"><span class="glyphicon glyphicon-log-out"></span> sign Up </a></li> <br>
+            <li><a class="btn-sm button-70" href="admin/"><span class="glyphicon glyphicon-sign-up"></span> sign Up </a></li> <br>
             <li><a class=" button-70" href="admin/login.php"> <span class="glyphicon glyphicon-log-in"> </span>  Login</a></li>
            	</ul>
 
