@@ -212,7 +212,7 @@ if(isset($_GET['add']) || isset($_GET['edit'])) {
       $tmpLoc[] = $_FILES['photo']['tmp_name'][$i];
       $fileSize = $_FILES['photo']['size'][$i];
       $uploadName = md5(microtime()).'.'.$fileExt;
-     $uploadPath[] = BASEURL.'images/products/'.$uploadName;
+     $uploadPath[] = BASEURL.'/online store/images/products/'.$uploadName;
      if ($i != 0) {
        $dbpath .= ',';
      }
