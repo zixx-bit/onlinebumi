@@ -22,7 +22,7 @@
       }
       var parentID = jQuery('#parent').val();
       jQuery.ajax({
-        url: '/admin/parsers/child_categories.php',
+        url: '/online store/admin/parsers/child_categories.php',
         type: 'POST',
         data: {parentID : parentID, selected: selected},
         success: function(data){
