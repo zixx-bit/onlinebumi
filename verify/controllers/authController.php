@@ -30,7 +30,7 @@ if (isset($_POST['signup-btn'])) {
     $permissions = $_POST['permissions'];
 
     // Check if email already exists
-    $sql = "SELECT * FROM verify WHERE email='$email' LIMIT 1";
+    $sql = "SELECT * FROM users WHERE email='$email' LIMIT 1";
     $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) > 0) {
         $errors['email'] = "Email already exists";
