@@ -49,12 +49,12 @@ if (isset($_POST['signup-btn'])) {
             // TO DO: send verification email to user
             sendVerificationEmail($email, $token);
 
-            // $_SESSION['id'] = $user_id;
-            // $_SESSION['username'] = $username;
-            // $_SESSION['email'] = $email;
-            // $_SESSION['verified'] = false;
-            // $_SESSION['message'] = 'You are logged in!';
-            // $_SESSION['type'] = 'alert-success';
+            $_SESSION['id'] = $user_id;
+            $_SESSION['username'] = $username;
+            $_SESSION['email'] = $email;
+            $_SESSION['verified'] = false;
+            $_SESSION['message'] = 'You are logged in!';
+            $_SESSION['type'] = 'alert-success';
             header('location: index.php');
         } else {
             $_SESSION['error_msg'] = "Database error: Could not register user";
