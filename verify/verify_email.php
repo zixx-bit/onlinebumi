@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$conn = new mysqli('localhost', 'bitray', '802neoKenya', 'store');
+$conn = new mysqli('localhost', 'root', '', 'store');
 
 if (isset($_GET['token'])) {
     $token = $_GET['token'];
