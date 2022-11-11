@@ -32,7 +32,7 @@ $size_array = explode(',', $sizestring);
 
           <span id="modal_errors" class="bg-danger"></span>
 
-          <div class="col-sm-6 ">
+          <div class="col-sm-6 "style=" border:1px solid #3ea1de;  padding: 5px;border-radius:5px;">
             <h5 style="font-weight:bold;" class=""><span style="">Images:</span></h5>
 
 
@@ -68,12 +68,14 @@ $size_array = explode(',', $sizestring);
            <h4 style="font-weight:bold;" class="text-center text-info"><span style="border-bottom:1px solid #000;">Details</span></h4><br>
             </div>
           <div class="col-sm-6 ">
-            <p> <strong>Description:</strong> </p><hr>
-            <p><?= $product['description']; ?></p> <hr>
-            <!-- <hr> -->
-            <p> <strong>House Type:</strong> <?php echo $brand['brand']; ?> </p>
 
-            <p class="" style=""><strong>Rent:  <span class="text-danger">Ksh <?php echo $product['price']; ?></span> </strong></p>
+            <p class="" style=""><strong>Rent:  <span class="text-danger">Ksh <?php echo $product['price']; ?></span> </strong></p><hr>
+            <p> <strong>House Type:</strong> <?php echo $brand['brand']; ?> </p><hr>
+
+            <p > <strong style="border-bottom:1px solid #000;">Description:</strong> </p>
+            <p><?= $product['description']; ?></p>
+            <!-- <hr> -->
+
               </div>
 
             <div class="col-md-6">
