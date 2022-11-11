@@ -77,7 +77,6 @@ function user_select(){
 }
 
 
-function navigation_view($view = 'cart'){}
 
 function pretty_date($date){
   return date("M d, Y h:i:A",strtotime($date));
