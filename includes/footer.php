@@ -60,7 +60,7 @@
   function detailsmodal(id){
     var data ={"id" : id};
     jQuery.ajax({
-      url : '/includes/detailsmodal.php',
+      url : '/online store/includes/detailsmodal.php',
       method : "post",
       data : data,
       success : function(data){
