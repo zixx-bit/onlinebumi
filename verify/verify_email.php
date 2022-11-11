@@ -5,14 +5,14 @@ $conn = new mysqli('localhost', 'bitray', '802neoKenya', 'store');
 
 if (isset($_GET['token'])) {
     $token = $_GET['token'];
-    $sql = "SELECT * FROM verify WHERE token='$token' LIMIT 1";
+    $sql = "SELECT * FROM users WHERE token='$token' LIMIT 1";
 
       $result = mysqli_query($conn, $sql);
       // var_dump($result);
 
     if (mysqli_num_rows($result) > 0) {
         $user = mysqli_fetch_assoc($result);
-        $query = "UPDATE verify SET verified = 1 WHERE token='$token'";
+        $query = "UPDATE users SET verified = 1 WHERE token='$token'";
 
         if (mysqli_query($conn, $query)) {
             $_SESSION['id'] = $user['id'];
