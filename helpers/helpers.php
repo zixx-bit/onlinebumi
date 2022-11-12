@@ -44,13 +44,13 @@ function login($user_id){
 }
 
 function is_logged_in(){
-  if (isset($_SESSION['id']) && $_SESSION['SBUser'] > 0) {
+  if (isset($_SESSION['id']) && $_SESSION['username'] > 0) {
      return true;
   }
   return false;
 }
 
-function login_error_redirect($url = 'login.php'){
+function login_error_redirect($url = '../verify/login.php'){
   $_SESSION ['error_flash'] = '<div class="text-center" style= "color:#CC0000; text-align:center; background-color:#eb9ba5;">You must be logged in to access this page</div>';
   header('Location: '.$url);
 }
