@@ -1,4 +1,4 @@
- <?php
+; <?php
 function display_errors($errors){
   $display ='<ul class="bg-danger"
    style="list-style-type:circle; z-index: 2;  margin:10px;  padding-left:10px; border:1px solid #d13f48; border-radius:10px;">';
@@ -31,7 +31,7 @@ function money($number){
 }
 
 function login($user_id){
-  $_SESSION['SBUser'] = $user_id;
+  $_SESSION['id'] = $user_id;
   global $db;
   $date = date("Y-m-d H:i:s");
   $login_user = $db->prepare("UPDATE users SET last_login = ? WHERE id = ?");
@@ -44,13 +44,13 @@ function login($user_id){
 }
 
 function is_logged_in(){
-  if (isset($_SESSION['SBUser']) && $_SESSION['SBUser'] > 0) {
+  if (isset($_SESSION['id']) && $_SESSION['SBUser'] > 0) {
      return true;
   }
   return false;
 }
 
-function login_error_redirect($url = '../verify/login.php'){
+function login_error_redirect($url = 'login.php'){
   $_SESSION ['error_flash'] = '<div class="text-center" style= "color:#CC0000; text-align:center; background-color:#eb9ba5;">You must be logged in to access this page</div>';
   header('Location: '.$url);
 }
@@ -70,7 +70,7 @@ function has_permission($permission = 'admin'){
 }
 
 function user_select(){
-  if (isset($_SESSION['SBUser']) && $_SESSION['SBUser'] > 0) {
+  if (isset($_SESSION['id']) && $_SESSION['id'] > 0) {
      return true;
   }
     return false;
