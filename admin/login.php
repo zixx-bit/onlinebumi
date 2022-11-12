@@ -42,7 +42,7 @@
 
               // password verify
               if (!password_verify($password, $user['password'])){
-                $errors[] = '';
+                $errors[] = 'wrong password';
               }
                  if (!empty($errors)) {
                    display_errors($errors);
