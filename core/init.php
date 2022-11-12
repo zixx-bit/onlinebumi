@@ -24,7 +24,7 @@ if (isset($_SESSION['id'])) {
     $user_data = mysqli_fetch_assoc($query);
     $full_name = explode(' ', $user_data['full_name']);
     $user_data['first'] = $full_name[0];
-    $user_data['last']  = $full_name[1];
+    // $user_data['last']  = $full_name[1];
 }
 
 if (isset($_SESSION['success_flash'])) {
