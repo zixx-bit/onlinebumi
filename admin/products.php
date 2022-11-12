@@ -1,7 +1,7 @@
  <?php
 require_once $_SERVER['DOCUMENT_ROOT']. '/online store/core/init.php';
 if (!is_logged_in()) {
-  // login_error_redirect();
+  login_error_redirect();
 }
 // require_once BASEURL.'admin/includes/head.php';
 // require_once BASEURL.'admin/includes/navigation.php';
