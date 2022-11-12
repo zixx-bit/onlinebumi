@@ -18,8 +18,8 @@ if (isset($_COOKIE[CART_COOKIE])) {
 
 
 
-if (isset($_SESSION['SBUser'])) {
-    $user_id = $_SESSION['SBUser'];
+if (isset($_SESSION['id'])) {
+    $user_id = $_SESSION['id'];
     $query = $db->query("SELECT * FROM users WHERE id = '$user_id'");
     $user_data = mysqli_fetch_assoc($query);
     $full_name = explode(' ', $user_data['full_name']);
