@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-require_once $_SERVER['DOCUMENT_ROOT'].'/core/init.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/online store/core/init.php';
 if (!is_logged_in()) {
   login_error_redirect();
 }
