@@ -461,7 +461,7 @@ if (isset($_GET['featured'])) //change to feature
    <th id="th" class="text-center">Price</th>
    <th id="th" class="text-center">Category</th>
    <th id="th" class="text-center">Featured</th>
-   <!-- <th>Sold</th> -->
+   <th>Sold <?php echo $user; ?></th>
    <th id="th" class="text-center">Delete</th>
 
  </thead>
