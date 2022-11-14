@@ -31,7 +31,7 @@ function money($number){
 }
 
 function login($user_id){
-  $_SESSION['id'] = $user_id;
+  $_SESSION['SBUSER'] = $user_id;
   global $db;
   $date = date("Y-m-d H:i:s");
   $login_user = $db->prepare("UPDATE users SET last_login = ? WHERE id = ?");
