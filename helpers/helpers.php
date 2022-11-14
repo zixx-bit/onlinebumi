@@ -44,7 +44,7 @@ function login($user_id){
 }
 
 function is_logged_in(){
-  if (isset($_SESSION['id']) && $_SESSION['type'] > 0) {
+  if (isset($_SESSION['id']) && $_SESSION['email'] > 0) {
      return true;
   }
   return false;
