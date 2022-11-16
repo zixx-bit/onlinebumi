@@ -2,7 +2,7 @@
 require_once 'sendEmails.php';
 session_start();
 $username = "";
-$email = "";
+// $email = "";
 $permissions = "";
 $errors = [];
 
@@ -64,14 +64,13 @@ if (isset($_POST['signup-btn'])) {
 
 // LOGIN
 if (isset($_POST['login-btn'])) {
-    if (empty($_POST['username']) || empty($_POST['email']) ) {
+    if (empty($_POST['username']) ) {
         $errors['username'] = 'Username or email required';
     }
     if (empty($_POST['password'])) {
         $errors['password'] = 'Password required';
     }
     $username = $_POST['username'];
-    $email = $_POST['email'];
     $password = $_POST['password'];
 
     if (count($errors) === 0) {
