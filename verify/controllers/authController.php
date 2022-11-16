@@ -2,7 +2,7 @@
 require_once 'sendEmails.php';
 session_start();
 $username = "";
-// $email = "";
+$email = "";
 $permissions = "";
 $errors = [];
 
