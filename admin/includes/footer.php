@@ -34,12 +34,18 @@
       });
     }
 
+
+    jQuery('select[name="parent"]').change(function(){
+      get_child_options();
+    });
+
+
+
     function get_child_options2(selected){
       if (typeof selected ==='undefined') {
         var selected = '';
 
       }
-
       var childID = jQuery('#child').val();
       jQuery.ajax({
         url: '/online store/admin/parsers/child_categories.php',
@@ -54,9 +60,12 @@
       });
     }
 
-    jQuery('select[name="parent"]').change(function(){
-      get_child_options();
+
+    jQuery('select[name="child"]').change(function(){
+      get_child_options2();
     });
+
+
 
 
     function permission_signup(){
