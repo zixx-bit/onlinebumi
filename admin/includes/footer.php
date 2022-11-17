@@ -33,6 +33,27 @@
         },
       });
     }
+
+    function get_child_options2(selected){
+      if (typeof selected ==='undefined') {
+        var selected = '';
+
+      }
+
+      var childID = jQuery('#child').val();
+      jQuery.ajax({
+        url: '/online store/admin/parsers/child_categories.php',
+        type: 'POST',
+        data: {childID: childID, selected: selected},
+        success: function(data){
+          jQuery('#secondChild').html(data);
+        },
+        error:function(){
+          alert("something went wrong with second child options!")
+        },
+      });
+    }
+
     jQuery('select[name="parent"]').change(function(){
       get_child_options();
     });
