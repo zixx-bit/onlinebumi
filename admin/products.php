@@ -293,7 +293,7 @@ if(isset($_GET['add']) || isset($_GET['edit'])) {
    <select class="form-control" id="parent" name="parent">
      <option value=""<?=(($parent == '')?' selected':'');?> ></option>
      <?php while($p = mysqli_fetch_assoc($parentQuery)): ?>
-       <option value="<?=$p['id'];?>"<?=(($parent == $p['id'])?' selected':'');?>><?php echo $p['category']; ?></option>
+       <option value="<?=$p['id'];?>"<?=(($parent == $p['id'])? 'selected':'');?>><?php echo $p['category']; ?></option>
      <?php endwhile; ?>
    </select>
  </div>
@@ -543,8 +543,6 @@ if (isset($_GET['featured'])) //change to feature
  <script type="text/javascript">
 
   window.onload = getLocation();
-
-
 
  function getLocation(){
    if (navigator.geolocation) {
