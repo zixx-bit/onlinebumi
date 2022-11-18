@@ -28,12 +28,15 @@ if (empty($_SESSION['id'])) {
         <div class="alert <?php echo $_SESSION['type']; ?>">
           <?php
             echo $_SESSION['message'];
-          echo  $_SESSION['id'];
-          echo  $_SESSION['username'];
-          echo  $_SESSION['email'];
+          // echo  $_SESSION['id'];
+        $first_name = explode(' ', $_SESSION['username']);
+        $_SESSION['first'] = $first_name[0];
+        echo $_SESSION['first'];
+          // echo  $_SESSION['username'];
+          // echo  $_SESSION['email'];
             // echo  $_SESSION['token'];
               // echo  $_SESSION['password'];
-          echo  $_SESSION['verified'];
+          // echo  $_SESSION['verified'];
             unset($_SESSION['message']);
             unset($_SESSION['type']);
           ?>
