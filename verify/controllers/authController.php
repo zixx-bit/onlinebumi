@@ -37,7 +37,7 @@ if (isset($_POST['signup-btn'])) {
     }
 
     if (count($errors) === 0) {
-        $query = "INSERT INTO users SET full_name=?, email=?, token=?, password=?, permissions=?";
+        $query = "INSERT INTO users SET username=?, email=?, token=?, password=?, permissions=?";
         $stmt = $conn->prepare($query);
         $stmt->bind_param('sssss', $username, $email, $token, $password, $permissions);
         $result = $stmt->execute();
@@ -74,9 +74,9 @@ if (isset($_POST['login-btn'])) {
     $password = $_POST['password'];
 
     if (count($errors) === 0) {
-        $query = "SELECT * FROM users WHERE full_name=? OR email=? LIMIT 1";
+        $query = "SELECT * FROM users WHERE username=? OR email=? LIMIT 1";
         $stmt = $conn->prepare($query);
-        $stmt->bind_param('ss', $username, $email);
+        $stmt->bind_param('ss', $username, $username);
 
         if ($stmt->execute()) {
             $result = $stmt->get_result();
