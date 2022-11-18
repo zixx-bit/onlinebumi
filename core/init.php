@@ -22,7 +22,7 @@ if (isset($_SESSION['id'])) {
     $user_id = $_SESSION['id'];
     $query = $db->query("SELECT * FROM users WHERE id = '$user_id'");
     $user_data = mysqli_fetch_assoc($query);
-    $full_name = explode(' ', $user_data['full_name']);
+    $full_name = explode(' ', $user_data['username']);
     $user_data['first'] = $full_name[0];
     // $user_data['last']  = $full_name[1];
 }
