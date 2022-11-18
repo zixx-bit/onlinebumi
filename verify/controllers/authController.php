@@ -90,6 +90,12 @@ if (isset($_POST['login-btn'])) {
                 $_SESSION['verified'] = $user['verified'];
                 $_SESSION['message'] = 'You are logged in!';
                 $_SESSION['type'] = 'alert-success';
+
+                $user_id = $user['id'];
+                $date = date("Y-m-d H:i:s");
+                $login_user = $conn->prepare("UPDATE users SET last_login = ? WHERE id = ?");
+                $login_user->bind_param("si", $date, $user_id);
+                $login_user->execute();
                 header('location: index.php');
                 exit(0);
             } else { // if password does not match
