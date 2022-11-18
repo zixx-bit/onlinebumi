@@ -212,11 +212,11 @@ if(isset($_GET['add']) || isset($_GET['edit'])) {
       $tmpLoc[] = $_FILES['photo']['tmp_name'][$i];
       $fileSize = $_FILES['photo']['size'][$i];
       $uploadName = md5(microtime()).'.'.$fileExt;
-     $uploadPath[] = BASEURL.'/online store/images/products/'.$uploadName;
+     $uploadPath[] = BASEURL.'images/products/'.$uploadName;
      if ($i != 0) {
        $dbpath .= ',';
      }
-      $dbpath .= '/images/products/'.$uploadName;
+      $dbpath .= '/online store/images/products/'.$uploadName;
       if ($mimeType != 'image') {
         $errors[] = 'The product photo file must be an image.';
       }
