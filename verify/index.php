@@ -25,9 +25,15 @@ if (empty($_SESSION['id'])) {
 
         <!-- Display messages -->
         <?php if (isset($_SESSION['message'])): ?>
-        <div class="alert <?php echo $_SESSION['type'] ?>">
+        <div class="alert <?php echo $_SESSION['type']; ?>">
           <?php
             echo $_SESSION['message'];
+          echo  $_SESSION['id'];
+          echo  $_SESSION['username'];
+          echo  $_SESSION['email'];
+            // echo  $_SESSION['token'];
+              // echo  $_SESSION['password'];
+          echo  $_SESSION['verified'];
             unset($_SESSION['message']);
             unset($_SESSION['type']);
           ?>
