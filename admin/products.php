@@ -272,14 +272,14 @@ if(isset($_GET['add']) || isset($_GET['edit'])) {
   ?>
 <!-- //process the html for adding product -->
 
-<h2 class="text-center"> <?=((isset($_GET['edit']))?'Edit':'Add a New');?> Product</h2> <hr>
+<h2 class="text-center"> <?=((isset($_GET['edit']))?'Edit':'Add a New');?> House</h2> <hr>
 <form class="" action="products.php?<?=((isset($_GET['edit']))?'edit='.$edit_id:'add=1');?>" method="post"  enctype="multipart/form-data">
  <div class="form-group col-md-3">
-   <label for="title">Title*:</label>
+   <label for="title">House Name*:</label>
    <input type="text" name="title" class="form-control" id="title" value="<?=$title; ?>">
  </div>
  <div class="form-group col-md-3">
-   <label for="brand">Brand*:</label>
+   <label for="brand">House Type*:</label>
    <select class="form-control" name="brand" id="brand">
      <option value="" <?=(($brand =='')?' selected':'');?>></option>
      <?php while($b = mysqli_fetch_assoc($brandQuery)): ?>
@@ -289,7 +289,7 @@ if(isset($_GET['add']) || isset($_GET['edit'])) {
  </div>
 
  <div class="form-group col-md-3">
-   <label for="parent">Parent Category*:</label>
+   <label for="parent">Parent Category/ County*:</label>
    <select class="form-control" id="parent" name="parent">
      <option value=""<?=(($parent == '')?' selected':'');?> ></option>
      <?php while($p = mysqli_fetch_assoc($parentQuery)): ?>
@@ -299,7 +299,7 @@ if(isset($_GET['add']) || isset($_GET['edit'])) {
  </div>
 
  <div class="form-group col-md-3">
-   <label for="child">Child Category*:</label>
+   <label for="child">Child Category/location or localty  *:</label>
    <select id="child" name="child" class="form-control"  >
 
 
@@ -312,17 +312,22 @@ if(isset($_GET['add']) || isset($_GET['edit'])) {
  </div>
 
  <div class="form-group col-md-3">
-   <label for="list_price">List Price:</label>
+   <label for="list_price">Rent per Month:</label>
    <input type="text" id="list_price" name="list_price" class="form-control" value="<?=$list_price; ?>">
  </div>
 
  <div class="form-group col-md-3">
-   <label >Quantity & Sizes*:</label>
+   <label > Number of units available*
+     <!-- Quantity & Sizes*: -->
+   </label>
    <button class="btn btn-primary form-control" onclick="jQuery('#sizesModal').modal('toggle');return false;">Quantity</button>
  </div>
 
    <div class="form-group col-md-3">
-     <label for="sizes">Sizes & Qty Preview</label>
+     <label for="sizes">Number of units preview
+
+       <!-- Sizes & Qty Preview -->
+     </label>
      <input type="text" class="form-control"  name="sizes" id="sizes"  value="<?=$sizes;?>" readonly>
    </div>
 
