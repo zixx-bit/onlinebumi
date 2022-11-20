@@ -51,7 +51,8 @@ function is_logged_in(){
 }
 
 function login_error_redirect($url = '../verify/login.php'){
-  $_SESSION ['error_flash'] = '<div class="text-center" style= "color:#CC0000; text-align:center; background-color:#eb9ba5;">You must be logged in to access this page</div>';
+  $_SESSION ['error_flash'] = '<div class="text-center" style= "color:#CC0000; text-align:center; background-color:#eb9ba5;">
+  You must be logged in to access this page</div>';
   header('Location: '.$url);
 }
 
