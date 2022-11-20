@@ -1,11 +1,11 @@
 <?php
-$db=mysqli_connect('localhost', 'root', '', 'store');
+$db=mysqli_connect('localhost', 'bitray', '802neoKenya', 'store');
 if (mysqli_connect_errno()) {
   echo 'Database connection failed with error: '. mysqli_connect_error();
   die();
 }
 session_start();
-require_once $_SERVER['DOCUMENT_ROOT'].'/online store/config.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/config.php';
 require_once BASEURL.'helpers/helpers.php';
 require BASEURL.'vendor/autoload.php';
 
