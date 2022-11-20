@@ -72,12 +72,12 @@
           </div>
 
           <div class="form-group my-2">
-            <label>Password</label>
+            <label>Password:</label>
             <input type="password" name="password" class="form-control form-control-lg" value="">
           </div>
 
           <div class="form-group my-2">
-            <label>Password Confirm</label>
+            <label>Password Confirm:</label>
             <input type="password" name="passwordConf" class="form-control form-control-lg" value="">
           </div>
 
