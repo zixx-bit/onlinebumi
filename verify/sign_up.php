@@ -71,12 +71,12 @@
             <input type="text" name="email" class="form-control form-control-lg" value="<?php echo $email; ?>">
           </div>
 
-          <div class="form-group">
+          <div class="form-group my-2">
             <label>Password</label>
             <input type="password" name="password" class="form-control form-control-lg" value="">
           </div>
 
-          <div class="form-group">
+          <div class="form-group my-2">
             <label>Password Confirm</label>
             <input type="password" name="passwordConf" class="form-control form-control-lg" value="">
           </div>
@@ -92,8 +92,8 @@
             </select>
               </div>
 
-          <div class="form-group">
-            <button type="submit" name="signup-btn" class=" d-grid my-3 btn btn-block">Sign Up</button>
+          <div class="form-group d-grid">
+            <button type="submit" name="signup-btn" class="  my-3 btn btn-block">Sign Up</button>
           </div>
 
         </form>
