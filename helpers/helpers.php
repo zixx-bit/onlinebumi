@@ -55,7 +55,7 @@ function login_error_redirect($url = '../verify/login.php'){
   header('Location: '.$url);
 }
 
-function permission_error_redirect($url = 'login.php'){
+function permission_error_redirect($url = '../verify/login.php'){
   $_SESSION ['error_flash'] = 'You do not have permission  to access that page';
   header('Location: '.$url);
 }
