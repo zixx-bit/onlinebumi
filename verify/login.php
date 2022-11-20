@@ -69,8 +69,8 @@
             <button type="submit" name="login-btn" class="btn btn-lg btn-block">Login</button>
           </div>
         </form>
-        <p>Don't yet have an account? <a href="sign_up.php">Sign up</a></p>
-        <p class="my-3">Go to home page <a href="..index.php">Visit site</a></p>
+        <p>Don't have an account? <a href="sign_up.php">Sign up</a></p>
+        <p class="my-3">Go to home page <a href="../index.php">Visit site</a></p>
       </div>
     </div>
   </div>
