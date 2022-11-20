@@ -216,7 +216,7 @@ if(isset($_GET['add']) || isset($_GET['edit'])) {
      if ($i != 0) {
        $dbpath .= ',';
      }
-      $dbpath .= ' /images/products/'.$uploadName;
+      $dbpath .= '/images/products/'.$uploadName;
       if ($mimeType != 'image') {
         $errors[] = 'The product photo file must be an image.';
       }
