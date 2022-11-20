@@ -77,7 +77,7 @@
           </div>
 
           <div class="form-group my-2">
-            <label>Password Confirm:</label>
+            <label>Confirm password:</label>
             <input type="password" name="passwordConf" class="form-control form-control-lg" value="">
           </div>
 
