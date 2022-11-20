@@ -93,7 +93,7 @@
               </div>
 
           <div class="form-group">
-            <button type="submit" name="signup-btn" class="btn btn-lg btn-block">Sign Up</button>
+            <button type="submit" name="signup-btn" class=" d-grid my-3 btn btn-block">Sign Up</button>
           </div>
 
         </form>
