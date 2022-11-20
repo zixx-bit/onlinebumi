@@ -1094,7 +1094,7 @@ display: block;
 #product:hover {
   border-radius: 5px;
   /* margin-bottom:10px; */
-box-shadow: 0 2px 20px #333;
+/* box-shadow: 0 2px 20px #333; */
 opacity: 1;
 transition: 0.5s;
 /* transform: rotateX(360deg); */
