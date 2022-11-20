@@ -307,12 +307,12 @@ if(isset($_GET['add']) || isset($_GET['edit'])) {
    </div>
 
  <div class="form-group col-md-3">
-   <label for="price">Our Price*:</label>
+   <label for="price">Our Rent per month*:</label>
    <input type="text" id="price" name="price" class="form-control"  value="<?=$price;?>">
  </div>
 
  <div class="form-group col-md-3">
-   <label for="list_price">Rent per Month:</label>
+   <label for="list_price">Nearby rent per Month:</label>
    <input type="text" id="list_price" name="list_price" class="form-control" value="<?=$list_price; ?>">
  </div>
 
