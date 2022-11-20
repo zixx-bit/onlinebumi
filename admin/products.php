@@ -289,7 +289,7 @@ if(isset($_GET['add']) || isset($_GET['edit'])) {
  </div>
 
  <div class="form-group col-md-3">
-   <label for="parent">Parent Category/ County*:</label>
+   <label for="parent">Main Category/ County*:</label>
    <select class="form-control" id="parent" name="parent">
      <option value=""<?=(($parent == '')?' selected':'');?> ></option>
      <?php while($p = mysqli_fetch_assoc($parentQuery)): ?>
@@ -299,7 +299,7 @@ if(isset($_GET['add']) || isset($_GET['edit'])) {
  </div>
 
  <div class="form-group col-md-3">
-   <label for="child">Child Category/location or localty  *:</label>
+   <label for="child">Sub Category/location or localty  *:</label>
    <select id="child" name="child" class="form-control"  >
 
 
