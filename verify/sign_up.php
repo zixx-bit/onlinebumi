@@ -13,6 +13,34 @@
   <link rel="stylesheet" href="main.css">
   <title>User verification</title>
 </head>
+<!--
+<style media="screen" href ="">
+  body{
+    margin:0;
+    color:#6a6f8c;
+    background:#c8c8c8;
+    font:600 16px/18px 'Open Sans',sans-serif;
+    /* background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url("../images/headerlogo/backgroun.jpg"); */
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+
+  }
+    *,:after,:before{box-sizing:border-box}
+    .clearfix:after,.clearfix:before{content:'';display:table}
+    .clearfix:after{clear:both;display:block}
+    a{color:inherit;text-decoration:none}
+    .login-wrap{
+      width:100%;
+      margin:auto;
+      margin-top: 30px;
+      max-width:525px;
+      min-height:670px;
+      position:relative;
+      background:url(http://codinginfinite.com/demo/images/bg.jpg) no-repeat center;
+      box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+    }
+
+</style> -->
 <body>
   <div class="container">
     <div class="row">
