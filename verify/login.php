@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="main.css">
   <title>User verification - Login</title>
 </head>
-<style media="screen" href ="">
+<!-- <style media="screen" href ="">
   body{
     margin:0;
     color:#6a6f8c;
@@ -37,7 +37,7 @@
       box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
     }
 
-</style>
+</style> -->
 
 <body>
   <div class="container">
