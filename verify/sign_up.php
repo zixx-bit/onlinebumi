@@ -61,12 +61,12 @@
     <?php endforeach;?>
   </div>
 <?php endif;?>
-          <div class="form-group">
+          <div class="form-group my-2">
             <label>Username</label>
             <input type="text" name="username" class="form-control form-control-lg" value="<?php echo $username; ?>">
           </div>
 
-          <div class="form-group">
+          <div class="form-group my-2">
             <label>Email</label>
             <input type="text" name="email" class="form-control form-control-lg" value="<?php echo $email; ?>">
           </div>
