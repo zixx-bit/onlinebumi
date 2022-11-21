@@ -6,7 +6,7 @@ $email = "";
 $permissions = "";
 $errors = [];
 
-$conn = new mysqli('localhost', 'root', '', 'store');
+$conn = new mysqli('localhost', 'bitray', '802neoKeny', 'store');
 
 // SIGN UP USER
 if (isset($_POST['signup-btn'])) {
