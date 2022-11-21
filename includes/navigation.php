@@ -28,8 +28,8 @@ $pquery = $db->query($sql);
               <div class="">
                 <span class="glyphicon glyphicon-sign-up"></span>
               </div>
-            <li><a class="btn-sm button-70" href="admin/"> Sign Up </a></li> <br>
-            <li><a class="btn-block button-70" href="admin/login.php"> <span class="glyphicon glyphicon-log-in"> </span>  Login</a></li>
+            <!-- <li><a class="btn-sm button-70" href="admin/"> Sign Up </a></li> <br> -->
+            <li><a class="btn-block button-70" href="..verify/login.php"> <span class="glyphicon glyphicon-log-in"> </span>  Login</a></li>
            	</ul>
 
      </div> <!-- navbar-collapse.// -->
