@@ -194,7 +194,7 @@ if(isset($_GET['add']) || isset($_GET['edit'])) {
 
     // var_dump($_FILES['photo']);
     $photoCount = count($_FILES['photo']['name']);
-    echo $photoCount;
+    // echo $photoCount;
     if ($photoCount > 0)  {
       for ($i=0; $i<$photoCount; $i++) {
         // echo $i;
