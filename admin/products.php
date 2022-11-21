@@ -349,7 +349,7 @@ if(isset($_GET['add']) || isset($_GET['edit'])) {
    endforeach;
       ?>
    <?php else:?>
-   <label for="photo">Product photo*:</label>
+   <label for="photo">photos*:</label>
    <input type="file" id="photo" name="photo[]" class="form-control" multiple >
    <?php endif;?>
  </div>
@@ -367,7 +367,7 @@ if(isset($_GET['add']) || isset($_GET['edit'])) {
  </div>
 
  <div class="form-group pull-right">
-  <input type="submit" class="  btn btn-success " name="" value="<?=((isset($_GET['edit']))?'Edit':'Add');?> Product">
+  <input type="submit" class="  btn btn-success " name="" value="<?=((isset($_GET['edit']))?'Edit':'Add');?> house">
   <a href="products.php" class="btn btn-danger">Cancel</a>
 
  </div>
