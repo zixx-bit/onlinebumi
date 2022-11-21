@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Lora');
+/* @import url('https://fonts.googleapis.com/css?family=Lora'); */
 li { list-style-type: none; }
 .form-wrapper {
   margin: 50px auto 50px;
-  font-family: 'Lora', serif;
+  font: Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
+   /* 'sans', serif; */
   font-size: 1.09em;
 }
 .form-wrapper.login { margin-top: 120px; }
