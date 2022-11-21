@@ -193,10 +193,11 @@ if(isset($_GET['add']) || isset($_GET['edit'])) {
 
 
     // var_dump($_FILES['photo']);
-    $photoCount = count($_FILES['photo']['name']); echo $photoCount;
+    $photoCount = count($_FILES['photo']['name']);
+    echo $photoCount;
     if ($photoCount > 0)  {
       for ($i=0; $i<$photoCount; $i++) {
-        echo $i;
+        // echo $i;
     //   // change this code to add product without image
     //   // if ($_FILES['photo']['name'] != '') {
     //   //   // code...
