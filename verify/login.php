@@ -57,16 +57,18 @@
     <?php endforeach;?>
   </div>
 <?php endif;?>
-          <div class="form-group">
-            <label>Username or Email</label>
+          <div class="form-group my-3">
+            <label>Username or Email:</label>
             <input type="text" name="username" class="form-control form-control-lg" value="<?php echo $username; ?>">
           </div>
-          <div class="form-group">
-            <label>Password</label>
+
+          <div class="form-group my-3">
+            <label>Password:</label>
             <input type="password" name="password" class="form-control form-control-lg">
           </div>
-          <div class="form-group">
-            <button type="submit" name="login-btn" class="btn btn-lg btn-block">Login</button>
+
+          <div class="form-group d-grid">
+            <button type="submit" name="login-btn" class="my-3 btn btn-block">Login</button>
           </div>
         </form>
         <p>Don't have an account? <a href="sign_up.php">Sign up</a></p>
