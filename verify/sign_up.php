@@ -1,4 +1,6 @@
-<?php include 'controllers/authController.php'; ?>
+<?php include 'controllers/authController.php';
+ error_reporting(1);
+ ?>
 
 
 <!DOCTYPE html>
@@ -93,7 +95,7 @@
               </div>
 
           <div class="form-group d-grid">
-            <button type="submit" name="signup-btn" class="  my-3 btn btn-block">Sign Up</button>
+            <button type="submit" name="signup-btn" class="my-3 btn btn-block">Sign Up</button>
           </div>
 
         </form>
