@@ -50,7 +50,7 @@ $sql->close();
    $brand = sanitize($_POST['brand']);
    // check if brand is blank
        if ($_POST['brand'] =='') {
-         $errors[] .='You must enter a brand!';
+         $errors[] .='You must enter a house type!';
        }
 
    // check if brand exists in Database
@@ -66,7 +66,7 @@ $sql->close();
        $count = mysqli_num_rows($result);
              if ($count>0) {
 
-              $errors[].=$brand.' already exists! Please choose another brand name.';
+              $errors[].=$brand.' already exists! Please choose another house type.';
        }
 
   // display $errors
@@ -79,7 +79,7 @@ $sql->close();
      VALUES(?)");
     $sql3 -> bind_param("s", $brand);
     // $sql3->execute();
-    $_SESSION['success_flash'] = 'Brand added succesfully';
+    $_SESSION['success_flash'] = 'House type added succesfully';
 
     // $sql3->close();
     header('location: brands.php');
@@ -88,7 +88,7 @@ $sql->close();
       $sql3 = $db->prepare("UPDATE brand SET brand = ? WHERE id = ?");
       $sql3 -> bind_param("si", $brand, $edit_id);
       // $sql3 -> execute();
-      $_SESSION['success_flash'] = "Brand edited succesfully :)";
+      $_SESSION['success_flash'] = "House type edited succesfully :)";
 
       }
       $sql3->execute();
