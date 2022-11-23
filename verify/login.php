@@ -43,7 +43,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4 offset-md-4 form-wrapper auth login">
-        <h3 class="text-center form-title">Login</h3>
+        <h3 class="text-center form-title">Login</h3><hr>
         <form action="login.php" method="post">
           <!-- form title -->
 <h3 class="text-center form-title"></h3> <!-- or Login -->
