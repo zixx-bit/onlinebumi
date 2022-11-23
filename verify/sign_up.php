@@ -49,7 +49,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4 offset-md-4 form-wrapper auth">
-        <h3 class="text-center form-title">Register</h3>
+        <h3 class="text-center form-title">Register</h3><hr>
         <form action="sign_up.php " method="post">
           <!-- form title -->
 <h3 class="text-center form-title"></h3> <!-- or Login -->
