@@ -1,5 +1,5 @@
 <?php
-$db=mysqli_connect('localhost', 'bitray', '802neoKenya', 'store');
+$db=mysqli_connect('localhost', '', '', '');
 if (mysqli_connect_errno()) {
   echo 'Database connection failed with error: '. mysqli_connect_error();
   die();
